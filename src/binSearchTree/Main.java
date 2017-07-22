@@ -1,20 +1,22 @@
 package binSearchTree;
 
+import java.util.Random;
+
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Tree t = new Tree(0);
-		t.insertKey(50);
-		for (int i =51; i < 100; i++) {
-			t.insertKey(i);
+		Random rng = new Random();
+		Tree t = new Tree(rng.nextInt());
+		for (int i = 0; i < 100; i++) {
+			t.insertKey(rng.nextInt());
+			
 		}
-		for (int i = 49; i >=0; i--) {
-			t.insertKey(i);
-		}
+		
 		System.out.println(t.preOrder());
 		System.out.println(t.inOrder());
 		System.out.println(t.postOrder());
+		System.out.println(t);
 	}
 
 }
